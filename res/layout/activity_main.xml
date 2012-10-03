@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blue" >
+
+    <LinearLayout
+        android:id="@+id/main_header_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dip"
+        android:background="@color/bg_blue"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/main_header_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/tv_heading"
+            android:textColor="@color/tv_white"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_analyzed_rl"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/main_header_ll"
+        android:layout_margin="5dip"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/shape" >
+
+        <TextView
+            android:id="@+id/main_analyzed_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/tv_analyzed"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_dropbox_rl"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/main_analyzed_rl"
+        android:layout_margin="5dip"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/shape" >
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/picture" />
+
+        <RelativeLayout
+            android:id="@+id/main_dropbox_inside_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/shape" >
+
+            <LinearLayout
+                android:id="@+id/main_dropbox_view"
+                android:layout_width="150dp"
+                android:layout_height="3dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="#a5a5a5"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/main_dropbox_take_photo_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/main_dropbox_view"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_horizontal"
+                android:text="@string/tv_touch_here_to_take_photo" />
+
+            <TextView
+                android:id="@+id/main_dropbox_drag_photo_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/main_dropbox_view"
+                android:gravity="center_horizontal"
+                android:text="@string/tv_drag_photo_from_gallery" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/main_dropbox_rl"
+        android:layout_margin="5dip" />
+
+</RelativeLayout>
